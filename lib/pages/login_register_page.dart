@@ -39,15 +39,17 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _title() {
-    return const Text('Firebase Auth');
+    return const Text('Welcome to QuickList');
   }
 
   Widget _entryField(
     String title,
     TextEditingController controller,
+  {bool obscureText = false}
   ) {
     return TextField(
       controller: controller,
+      obscureText: obscureText,
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         labelText: title,
@@ -100,6 +102,7 @@ class _LoginPageState extends State<LoginPage> {
               _entryField(
                 'Password',
                 _controlllerPassword,
+                obscureText: true
               ),
               _errorMessage(),
               _submitButton(),

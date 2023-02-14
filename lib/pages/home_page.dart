@@ -172,7 +172,7 @@ class _MyHomePageState extends State<HomePage> {
                     // Map<String, dynamic> data =
                     // document.data()! as Map<String, dynamic>;
                     return ListTile(
-                      selected: index == _selectedIndex,
+                      tileColor: index == _selectedIndex ? Colors.grey[350] : null,
                       title: Text(snapshot.data!.docs[index]['text']),
                       onLongPress: () {
                         setState(() {
